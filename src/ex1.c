@@ -20,8 +20,21 @@ void troca_valores(int *a, int *b);
 
 int main (int argc, char *argv[])
 {
+  int *a,*b,x,y;
+  printf("Digite os valores de (a, b): ");
+  scanf("%i,%i",&x,&y);
+  a = &x;
+  b = &y;
+  troca_valores(a,b);
   return 0;
 }
 
 void troca_valores(int *a, int *b) {
+  int *aux;
+  printf("A = %i, B = %i",*a,*b);
+  aux = a;
+  a = b;
+  b = aux;
+  printf("A = %i, B = %i",*a,*b);
+
 }

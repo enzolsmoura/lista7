@@ -24,7 +24,7 @@ install:
 	@cd ./$(TEST_DIR)/$(CHECK404_DIR); $(MAKE) install 
 
 test: all
-	python ./$(TEST_DIR)/$(CHECK404_DIR)/check404.py
+	python3 ./$(TEST_DIR)/$(CHECK404_DIR)/check404.py
 	@$(MAKE) -s clean
 
 $(PROBLEM_SET): $(BIN_DIR) ./dll 

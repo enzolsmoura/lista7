@@ -22,10 +22,33 @@ void exibe_vetor(int *v, int tam);
 
 int main (int argc, char *argv[])
 {
+  int vetor[MAX], a, *v, *tam;
+  printf("Digite o vetor: ");
+  for(int i=0;i<MAX;i++){
+    scanf("%i",&a);
+    if(a==-100){
+      tam = &i;
+      break;
+    } 
+    vetor[i] = a;
+  }
+  v = vetor;
+  ler_vetor(v,tam);
   return 0;
 }
 
 void ler_vetor(int *v, int *tam) {
+  printf("[");
+  for(int i = 0;i<*tam;i++){
+    printf("%i",*(v+i));
+    if(i==*tam-1){
+      break;
+    }
+    printf(", ");
+  }
+    
+  
+  printf("]");
 }
 
 void exibe_vetor(int *v, int tam) {
